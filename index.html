@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header id="cabecalho" class="navbar navbar-expand-lg sticky-top p-4"> <!--p-4 -> padding | sticky-top para o cabeçalho acompanhar a rolagem da página-->
+        <div class="container">
+            <h1 class="navbar-brand m-0 section-title">Restaurante</h1>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegacao">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="navbar-collapse collapse justify-content-end" id="menu-navegacao">
+                <ul class="nav nav-pills d-block d-md-flex"> <!--d-block = display: block; | d-md-flex = propriedade-breakpoint-valor-->
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#sobre-o-restaurante">
+                            <i class="bi bi-house-door me-1"></i> <!--me-1 (me -> margin-end = margin-rigth -> chega até o 5)-->
+                            Sobre o restaurante
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#eventos">
+                            <i class="bi bi-calendar-check me-1"></i>
+                            Eventos
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#cardapio">
+                            <i class="bi bi-card-text me-1"></i>
+                            Nosso cardápio
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#fale-conosco">
+                            <i class="bi bi-chat-left-text me-1"></i>
+                            Fale conosco
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div data-bs-spy="scroll" data-bs-target="cabecalho" data-bs-smooth-scroll="true">
+        <section id="sobre-o-restaurante">
+            <div class="carousel slide" data-bs-ride="carousel" id="carousel">
+                <div class="carousel-inner">
+                    <div data-bs-interval="3000" class="carousel-item active">
+                        <img src="images/restauranteFachada.jpg" alt="Foto da fachada do restaurante">
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item">
+                        <img src="images/restauranteInner.jpg" alt="Foto interna do restaurante">
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item">
+                        <img src="images/restaurantePrato.jpg" alt="Foto de ingredientes">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" class="active" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+            <div class="pt-5 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="images/espacoInterno.jpg" class="d-block w-100 rounded" alt="Foto do espaço interno">
+                        </div>
+                        <div class="col-md-7 mt-3 mt-md-0">
+                            <h2 class="section-title">Sobre <span class="text-colored">o restaurante</span></h2>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque mollitia quae quos, quo officia, 
+                                quibusdam ab facilis incidunt corporis, accusantium nulla expedita? Debitis aperiam ea tenetur, eius sint tempora ducimus?
+                            </p>
+                            <h3 class="section-title">Sobre <span class="text-colored">o espaço</span></h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, voluptates facilis? Ea dolorum aspernatur tempore dignissimos, 
+                                sequi sunt aliquam laborum, quaerat neque consequatur repellendus cumque eius voluptatibus qui labore sapiente!
+                            </p>
+                            <ul>
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>Item 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="eventos" class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <h2 class="section-title text-center">Para todas <span class="text-colored">as ocasiões</span></h2>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <img src="images/eventos.jpg" alt="Imagem de evento" class="d-block w-100 rounded mb-2">
+                        <h3 class="section-title text-colored fs-4">
+                            <i class="bi bi-calendar-heart-fill"></i>
+                            Aniversários
+                        </h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea vitae 
+                            id nihil quis! Nesciunt ratione at quasi ut. Ipsa quia minus dolor animi debitis, 
+                            earum aliquid nam tempore voluptatibus! Mollitia!
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/casamento.jpg" alt="Imagem de evento" class="d-block w-100 rounded mb-2">
+                        <h3 class="section-title text-colored fs-4">
+                            <i class="bi bi-arrow-through-heart-fill"></i>
+                            Recepção para casamentos
+                        </h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea vitae 
+                            id nihil quis! Nesciunt ratione at quasi ut. Ipsa quia minus dolor animi debitis, 
+                            earum aliquid nam tempore voluptatibus! Mollitia!
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/confraternizacao.jpg" alt="Imagem de evento" class="d-block w-100 rounded mb-2">
+                        <h3 class="section-title text-colored fs-4">
+                            <i class="bi bi-people-fill"></i>
+                            Confraternizações
+                        </h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea vitae 
+                            id nihil quis! Nesciunt ratione at quasi ut. Ipsa quia minus dolor animi debitis, 
+                            earum aliquid nam tempore voluptatibus! Mollitia!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="cardapio" class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <h2 class="section-title text-center mb-5">Nosso <span class="text-colored">cardápio</span></h2>
+                </div>
+                <div class="row">
+                    <aside class="col-md-2"> 
+                        <nav class="nav nav-pills flex-column nav-cardapio"> <!--nav-pills para as opções do menu terem aparencia de botão | flex-column para mudar a direção do flexbox-->
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#bebidas-sem-alcool" class="fw-bold text-start text-colored nav-link active">Bebidas não alcoólicas</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#bebidas-alcoolicas" class="fw-bold text-start text-colored nav-link">Bebidas alcoólicas</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#entradas" class="fw-bold text-start text-colored nav-link">Entradas</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#pratos-principais" class="fw-bold text-start text-colored nav-link">Pratos principais</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#sobremesas" class="fw-bold text-start text-colored nav-link">Sobremesas</button>
+                        </nav>
+                    </aside>
+                    <div class="col-md-10">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="bebidas-sem-alcool">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/sucoCenou.jpg" alt="Imagem de suco de cenoura">
+                                        <h5 class="text-colored fw-bold mt-2">Suco de cenoura</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/sucoLaranja.jpg" alt="Imagem de suco de cenoura">
+                                        <h5 class="text-colored fw-bold mt-2">Suco de laranja</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/sucoVerde.jpg" alt="Imagem de suco verde">
+                                        <h5 class="text-colored fw-bold mt-2">Suco verde</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/cocaCola.jpg" alt="Imagem de coca-cola">
+                                        <h5 class="text-colored fw-bold mt-2">Coca-cola</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/sucoCenou.jpg" alt="Imagem de suco de cenoura">
+                                        <h5 class="text-colored fw-bold mt-2">Suco de cenoura</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/sucoVerde.jpg" alt="Imagem de suco verde">
+                                        <h5 class="text-colored fw-bold mt-2">Suco verde</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/cocaCola.jpg" alt="Imagem de coca-cola">
+                                        <h5 class="text-colored fw-bold mt-2">Coca-cola</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/sucoCenou.jpg" alt="Imagem de suco de cenoura">
+                                        <h5 class="text-colored fw-bold mt-2">Suco de cenoura</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/sucoVerde.jpg" alt="Imagem de suco verde">
+                                        <h5 class="text-colored fw-bold mt-2">Suco verde</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="bebidas-alcoolicas">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/vinhoDaCasa.jpg" alt="Imagem de vinho da casa">
+                                        <h5 class="text-colored fw-bold mt-2">Vinho da casa</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/vinhoTinto.jpg" alt="Imagem de vinho">
+                                        <h5 class="text-colored fw-bold mt-2">Vinho tinto</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/whisky.jpg" alt="Imagem de whisky">
+                                        <h5 class="text-colored fw-bold mt-2">Whisky</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/vinhoDaCasa.jpg" alt="Imagem de vinho da casa">
+                                        <h5 class="text-colored fw-bold mt-2">Vinho da casa</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/vinhoTinto.jpg" alt="Imagem de vinho">
+                                        <h5 class="text-colored fw-bold mt-2">Vinho tinto</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/whisky.jpg" alt="Imagem de whisky">
+                                        <h5 class="text-colored fw-bold mt-2">Whisky</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/vinhoDaCasa.jpg" alt="Imagem de vinho da casa">
+                                        <h5 class="text-colored fw-bold mt-2">Vinho da casa</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/vinhoTinto.jpg" alt="Imagem de vinho">
+                                        <h5 class="text-colored fw-bold mt-2">Vinho tinto</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/whisky.jpg" alt="Imagem de whisky">
+                                        <h5 class="text-colored fw-bold mt-2">Whisky</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="entradas">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/entrada1.jpg" alt="Imagem de Salada">
+                                        <h5 class="text-colored fw-bold mt-2">Salada e torradas</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/entrada2.jpg" alt="Imagem de refogado">
+                                        <h5 class="text-colored fw-bold mt-2">Refogado</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/entrada3.jpg" alt="Imagem de camarão">
+                                        <h5 class="text-colored fw-bold mt-2">Camarão</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/entrada1.jpg" alt="Imagem de Salada">
+                                        <h5 class="text-colored fw-bold mt-2">Salada e torradas</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/entrada2.jpg" alt="Imagem de refogado">
+                                        <h5 class="text-colored fw-bold mt-2">Refogado</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/entrada3.jpg" alt="Imagem de camarão">
+                                        <h5 class="text-colored fw-bold mt-2">Camarão</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/entrada1.jpg" alt="Imagem de Salada">
+                                        <h5 class="text-colored fw-bold mt-2">Salada e torradas</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/entrada2.jpg" alt="Imagem de refogado">
+                                        <h5 class="text-colored fw-bold mt-2">Refogado</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/entrada3.jpg" alt="Imagem de camarão">
+                                        <h5 class="text-colored fw-bold mt-2">Camarão</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/entrada1.jpg" alt="Imagem de Salada">
+                                        <h5 class="text-colored fw-bold mt-2">Salada e torradas</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/entrada2.jpg" alt="Imagem de refogado">
+                                        <h5 class="text-colored fw-bold mt-2">Refogado</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/entrada3.jpg" alt="Imagem de camarão">
+                                        <h5 class="text-colored fw-bold mt-2">Camarão</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="pratos-principais">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/prato1.jpg" alt="Imagem de salmão grelhado">
+                                        <h5 class="text-colored fw-bold mt-2">Salmão grelhado</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/prato2.jpg" alt="Imagem de carne">
+                                        <h5 class="text-colored fw-bold mt-2">Carne</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/prato3.jpg" alt="Imagem de salmão">
+                                        <h5 class="text-colored fw-bold mt-2">Salmão</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/prato1.jpg" alt="Imagem de salmão grelhado">
+                                        <h5 class="text-colored fw-bold mt-2">Salmão grelhado</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/prato2.jpg" alt="Imagem de carne">
+                                        <h5 class="text-colored fw-bold mt-2">Carne</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/prato3.jpg" alt="Imagem de salmão">
+                                        <h5 class="text-colored fw-bold mt-2">Salmão</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/prato1.jpg" alt="Imagem de salmão grelhado">
+                                        <h5 class="text-colored fw-bold mt-2">Salmão grelhado</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/prato2.jpg" alt="Imagem de carne">
+                                        <h5 class="text-colored fw-bold mt-2">Carne</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/prato3.jpg" alt="Imagem de salmão">
+                                        <h5 class="text-colored fw-bold mt-2">Salmão</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/prato1.jpg" alt="Imagem de salmão grelhado">
+                                        <h5 class="text-colored fw-bold mt-2">Salmão grelhado</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/prato2.jpg" alt="Imagem de carne">
+                                        <h5 class="text-colored fw-bold mt-2">Carne</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/prato3.jpg" alt="Imagem de salmão">
+                                        <h5 class="text-colored fw-bold mt-2">Salmão</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/prato1.jpg" alt="Imagem de salmão grelhado">
+                                        <h5 class="text-colored fw-bold mt-2">Salmão grelhado</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/prato2.jpg" alt="Imagem de carne">
+                                        <h5 class="text-colored fw-bold mt-2">Carne</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/prato3.jpg" alt="Imagem de salmão">
+                                        <h5 class="text-colored fw-bold mt-2">Salmão</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="sobremesas">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/sobremesaDaCasa.jpg" alt="Imagem de sobremesa da casa">
+                                        <h5 class="text-colored fw-bold mt-2">Torta da casa</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/sobremesaMorango.jpg" alt="Imagem de sobremesa de morango">
+                                        <h5 class="text-colored fw-bold mt-2">Mousse de morango</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/sobremesaDaCasa.jpg" alt="Imagem de sobremesa da casa">
+                                        <h5 class="text-colored fw-bold mt-2">Torta da casa</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/sobremesaMorango.jpg" alt="Imagem de sobremesa de morango">
+                                        <h5 class="text-colored fw-bold mt-2">Mousse de morango</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/sobremesaDaCasa.jpg" alt="Imagem de sobremesa da casa">
+                                        <h5 class="text-colored fw-bold mt-2">Torta da casa</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/sobremesaMorango.jpg" alt="Imagem de sobremesa de morango">
+                                        <h5 class="text-colored fw-bold mt-2">Mousse de morango</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/sobremesaDaCasa.jpg" alt="Imagem de sobremesa da casa">
+                                        <h5 class="text-colored fw-bold mt-2">Torta da casa</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/sobremesaMorango.jpg" alt="Imagem de sobremesa de morango">
+                                        <h5 class="text-colored fw-bold mt-2">Mousse de morango</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/sobremesaDaCasa.jpg" alt="Imagem de sobremesa da casa">
+                                        <h5 class="text-colored fw-bold mt-2">Torta da casa</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/sobremesaMorango.jpg" alt="Imagem de sobremesa de morango">
+                                        <h5 class="text-colored fw-bold mt-2">Mousse de morango</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/sobremesaDaCasa.jpg" alt="Imagem de sobremesa da casa">
+                                        <h5 class="text-colored fw-bold mt-2">Torta da casa</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-blcok w-100 rounded" src="images/sobremesaMorango.jpg" alt="Imagem de sobremesa de morango">
+                                        <h5 class="text-colored fw-bold mt-2">Mousse de morango</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="fale-conosco" class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <h2 class="section-title text-center">Fale <span class="text-colored">conosco</span></h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-7 mb-5">
+                        <form>
+                            <div class="mb-3">
+                                <label for="nome" class="form-label fw-bold text-colored">Seu nome</label>
+                                <input type="text" id="nome" class="form-control" name="nome">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-bold text-colored">Seu email</label>
+                                <input type="email" id="email" class="form-control" name="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="tel" class="form-label fw-bold text-colored">Seu telefone (opicional)</label>
+                                <input type="tel" id="tel" name="tel" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensagem" class="form-label fw-bold text-colored">Sua mensagem</label>
+                                <textarea id="mensagem" class="form-control" name="mensagem"></textarea>
+                            </div>
+                            <button class="btn fw-bold" type="submit">Enviar</button>
+                        </form>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <h3 class="section-title fs-4 text-colored">
+                                <i class="bi bi-hand-thumbs-up-fill"></i>
+                                Redes sociais
+                            </h3>
+                            <ul class="social-links">
+                                <li class="fs-5">
+                                    <a href="#">
+                                        <i class="bi bi-facebook text-colored"></i>
+                                    </a>
+                                </li>
+                                <li class="fs-5 ms-1 me-1">
+                                    <a href="#">
+                                        <i class="bi bi-instagram text-colored"></i>
+                                    </a>
+                                </li>
+                                <li class="fs-5">
+                                    <a href="#">
+                                        <i class="bi bi-whatsapp text-colored"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row mt-4">
+                            <h3 class="section-title fs-4 text-colored">
+                                <i class="bi bi-cursor-fill"></i>
+                                Endereço
+                            </h3>
+                            <p>
+                                Rua Teste Exemplo nº 145, Bairro Bootstrap - Belo Horizonte - MG
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="container">
+            <p>
+                2022 &copy; 5A Restaurante - Todos os direitos reservados
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/messages_pt_BR.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
