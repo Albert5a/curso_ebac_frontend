@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Github</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img id="avatar" class="profile-avatar" src="https://via.placeholder.com/180x180" alt=".">
+            <h1 class="profile-name" id="name">Albert Soares</h1>
+            <h2 class="profile-username" id="username">@Albert5a</h2>
+            <ul class="numbers">
+                <li class="numbers-item" id="repos">
+                    <h4>Repositórios</h4>
+                    5
+                </li>
+                <li class="numbers-item" id="followers">
+                    <h4>Seguidores</h4>
+                    5
+                </li>
+                <li class="numbers-item" id="following">
+                    <h4>Seguindo</h4>
+                    5
+                </li>
+            </ul>
+            <a href="#" class="profile-link" id="link">Ver no Github</a>
+        </div>
+    </header>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            const name = document.querySelector('#name');
+            const username = document.querySelector('#username');
+            const avatar = document.querySelector('#avatar');
+            const repos = document.querySelector('#repos');
+            const followers = document.querySelector('#followers');
+            const following = document.querySelector('#following');
+            const link = document.querySelector('#link');
+
+            fetch('https://api.github.com/users/Albert5a')
+                .then(function(res) {
+                    return res.json();
+                })
+                .then(function(json) {
+                    name.innerText = json.name;
+                    username.innerText = json.login;
+                    avatar.src = json.avatar_url;
+                    repos.innerText = json.public_repos;
+                    followers.innerText = json.followers;
+                    following.innerText = json.following;
+                    link.href = json.html_url;
+                })
+        })
+    </script>
+</body>
+</html>
